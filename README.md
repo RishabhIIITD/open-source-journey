@@ -16,7 +16,7 @@ Rather than simply submitting code, each contribution is documented with a detai
 | # | Project | Issue / PR | Tech Stack | Status | Deep Dive & Case Study |
 |---|---|---|---|---|---|
 | **01** | [**Internet Archive: Open Library**](https://github.com/internetarchive/openlibrary) | [PR #14536](https://github.com/internetarchive/openlibrary/pull/14536) <br> *(Issue #14534)* | Python, web.py, Solr | 🟢 Open / CI Passing | [📖 Case Study](./contributions/01-openlibrary-dead-endpoint/README.md) · [📄 PDF](./contributions/01-openlibrary-dead-endpoint/walkthrough-guide.pdf) |
-| **02** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2144](https://github.com/PyCalendar/icalendar/pull/2144) <br> *(Issue #1797)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/02-pycalendar-todo-completed/README.md) |
+| **02** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2144](https://github.com/PyCalendar/icalendar/pull/2144) <br> *(Issue #1797)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/02-pycalendar-todo-completed/README.md) · [📄 PDF](./contributions/02-pycalendar-todo-completed/walkthrough-guide.pdf) |
 
 ---
 
