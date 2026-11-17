@@ -15,7 +15,7 @@ Rather than simply submitting code, each contribution is documented with a detai
 
 | # | Project | Issue / PR | Tech Stack | Status | Deep Dive & Case Study |
 |---|---|---|---|---|---|
-| **01** | [**Internet Archive: Open Library**](https://github.com/internetarchive/openlibrary) | [PR #14536](https://github.com/internetarchive/openlibrary/pull/14536) <br> *(Issue #14534)* | Python, web.py, Solr | 🟢 Open / CI Passing | [📖 Case Study](./contributions/01-openlibrary-dead-endpoint/README.md) |
+| **01** | [**Internet Archive: Open Library**](https://github.com/internetarchive/openlibrary) | [PR #14536](https://github.com/internetarchive/openlibrary/pull/14536) <br> *(Issue #14534)* | Python, web.py, Solr | 🟢 Open / CI Passing | [📖 Case Study](./contributions/01-openlibrary-dead-endpoint/README.md) · [📄 PDF](./contributions/01-openlibrary-dead-endpoint/walkthrough-guide.pdf) |
 
 ---
 
