@@ -1,2 +1,30 @@
-# open-source-journey
-A curated log of my open-source contributions, technical deep dives, and lessons learned across production codebases.
+# 🚀 My Open Source Journey
+
+Welcome to my open-source log! This repository documents my journey contributing to real-world, production open-source software. 
+
+Rather than simply submitting code, each contribution is documented with a detailed technical case study covering:
+- **Root-cause analysis & problem discovery**
+- **Codebase investigation & dependency checks**
+- **Community contribution guidelines & bot automation rules**
+- **CI/CD pipelines, linters, and formatting fixes**
+- **Key engineering takeaways**
+
+---
+
+## 📌 Contribution Log
+
+| # | Project | Issue / PR | Tech Stack | Status | Deep Dive & Case Study |
+|---|---|---|---|---|---|
+| **01** | [**Internet Archive: Open Library**](https://github.com/internetarchive/openlibrary) | [PR #14536](https://github.com/internetarchive/openlibrary/pull/14536) <br> *(Issue #14534)* | Python, web.py, Solr | 🟢 Open / CI Passing | [📖 Case Study](./contributions/01-openlibrary-dead-endpoint/README.md) |
+
+---
+
+## 🛠️ Key Takeaways & Practices
+1. **Understand Before Modifying**: Use `git grep` and code inspection to confirm that deprecated functions/routes have zero remaining callers before proposing deletions.
+2. **Respect Repository Automation**: Many production repositories (like Open Library) use bots to manage contributor triage; always check `CONTRIBUTING.md` before opening PRs.
+3. **Automated CI Hygiene**: Use repository bot commands like `pre-commit.ci autofix` to keep code formatting compliant with project standards (PEP 8, Ruff).
+
+---
+
+## 👤 Author
+- GitHub: [@RishabhIIITD](https://github.com/RishabhIIITD)
