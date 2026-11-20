@@ -11,7 +11,7 @@ Rather than simply submitting code, each contribution is documented with a detai
 
 ---
 
-## 📌 Contribution Log
+## 📌 Upstream Open Source Contribution Log
 
 | # | Project | Issue / PR | Tech Stack | Status | Deep Dive & Case Study |
 |---|---|---|---|---|---|
@@ -35,12 +35,21 @@ Rather than simply submitting code, each contribution is documented with a detai
 | **18** | [**Repowise: repowise**](https://github.com/repowise-dev/repowise) | [PR #5996](https://github.com/repowise-dev/repowise/pull/5996) <br> *(Issue #5980)* | Python, Click CLI, SQLite, pytest | 🟢 Open / In Review | [📖 Case Study](./contributions/18-repowise-delete-exit-code/README.md) · [📄 PDF](./contributions/18-repowise-delete-exit-code/walkthrough-guide.pdf) |
 | **19** | [**Repowise: repowise**](https://github.com/repowise-dev/repowise) | [PR #5999](https://github.com/repowise-dev/repowise/pull/5999) <br> *(Issue #5981)* | Python, Click CLI, Validation, pytest | 🟢 Open / In Review | [📖 Case Study](./contributions/19-repowise-watch-path-validation/README.md) · [📄 PDF](./contributions/19-repowise-watch-path-validation/walkthrough-guide.pdf) |
 | **20** | [**Repowise: repowise**](https://github.com/repowise-dev/repowise) | [PR #6000](https://github.com/repowise-dev/repowise/pull/6000) <br> *(Issue #5979)* | Python, Click CLI, JSON API, pytest | 🟢 Open / In Review | [📖 Case Study](./contributions/20-repowise-changes-events-json-error/README.md) · [📄 PDF](./contributions/20-repowise-changes-events-json-error/walkthrough-guide.pdf) |
-| **21** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #5](https://github.com/RishabhIIITD/open-source-journey/pull/5) | Python, Schema Validation, CLI | 🟢 Merged | [📖 Case Study](./contributions/21-case-study-validator/README.md) · [📄 PDF](./contributions/21-case-study-validator/walkthrough-guide.pdf) |
-| **22** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #6](https://github.com/RishabhIIITD/open-source-journey/pull/6) | Python, Headless Chrome, Pygments | 🟢 Merged | [📖 Case Study](./contributions/22-batch-pdf-pipeline/README.md) · [📄 PDF](./contributions/22-batch-pdf-pipeline/walkthrough-guide.pdf) |
-| **23** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #7](https://github.com/RishabhIIITD/open-source-journey/pull/7) | GitHub Actions, CI/CD, YAML | 🟢 Merged | [📖 Case Study](./contributions/23-github-actions-ci/README.md) · [📄 PDF](./contributions/23-github-actions-ci/walkthrough-guide.pdf) |
-| **24** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #8](https://github.com/RishabhIIITD/open-source-journey/pull/8) | Git Workflows, Semantic Commits, Docs | 🟢 Merged | [📖 Case Study](./contributions/24-contributor-playbook/README.md) · [📄 PDF](./contributions/24-contributor-playbook/walkthrough-guide.pdf) |
-| **25** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #9](https://github.com/RishabhIIITD/open-source-journey/pull/9) | RFC 5545, RFC 7529, SQLite WAL | 🟢 Merged | [📖 Case Study](./contributions/25-rfc-glossary/README.md) · [📄 PDF](./contributions/25-rfc-glossary/walkthrough-guide.pdf) |
-| **26** | [**Open Source Journey**](https://github.com/RishabhIIITD/open-source-journey) | [PR #10](https://github.com/RishabhIIITD/open-source-journey/pull/10) | Architecture Roadmap, Indexing, CI | 🟢 Merged | [📖 Case Study](./contributions/26-portfolio-index-architecture-roadmap/README.md) · [📄 PDF](./contributions/26-portfolio-index-architecture-roadmap/walkthrough-guide.pdf) |
+
+---
+
+## ⚙️ Repository Tooling & Automation Infrastructure
+
+To maintain documentation integrity, automated testing, and publication-ready artifacts, this repository includes its own custom Python automation and CI suite:
+
+| Tool / Pipeline | Purpose & Scope | Implementation Details | Architecture Guide |
+|---|---|---|---|
+| **Case Study Validator CLI** | Zero-dependency CLI validating frontmatter, directory schemas, and PDF presence | `scripts/validate_case_studies.py` | [📖 Case Study](./contributions/21-case-study-validator/README.md) · [📄 PDF](./contributions/21-case-study-validator/walkthrough-guide.pdf) |
+| **Batch PDF Compiler** | Headless Chrome build pipeline compiling Markdown to styled PDFs | `scripts/compile_all_case_studies.py` | [📖 Case Study](./contributions/22-batch-pdf-pipeline/README.md) · [📄 PDF](./contributions/22-batch-pdf-pipeline/walkthrough-guide.pdf) |
+| **GitHub Actions CI Workflow** | Continuous integration testing schema conformance on PRs and pushes | `.github/workflows/verify-portfolio.yml` | [📖 Case Study](./contributions/23-github-actions-ci/README.md) · [📄 PDF](./contributions/23-github-actions-ci/walkthrough-guide.pdf) |
+| **Contributor Playbook** | Comprehensive engineering guide on forks, branches, and semantic commits | `docs/CONTRIBUTOR_PLAYBOOK.md` | [📖 Case Study](./contributions/24-contributor-playbook/README.md) · [📄 PDF](./contributions/24-contributor-playbook/walkthrough-guide.pdf) |
+| **RFC Reference Dictionary** | Technical glossary covering RFC 5545 recurrence rules and SQLite WAL | `docs/RFC_GLOSSARY.md` | [📖 Case Study](./contributions/25-rfc-glossary/README.md) · [📄 PDF](./contributions/25-rfc-glossary/walkthrough-guide.pdf) |
+| **Portfolio Roadmap & Index** | Complete cross-protocol matrix and architecture dataflows | `README.md` | [📖 Case Study](./contributions/26-portfolio-index-architecture-roadmap/README.md) · [📄 PDF](./contributions/26-portfolio-index-architecture-roadmap/walkthrough-guide.pdf) |
 
 ---
 
