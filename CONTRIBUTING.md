@@ -20,3 +20,12 @@ When documenting a new open-source contribution, please structure the documentat
 - Maintain clear technical precision and reference relevant specifications (e.g., RFC standards, library documentation).
 - Include reproducible test steps.
 - Ensure all diagrams and markdown links are valid.
+
+### Co-authoring & Collaboration
+
+When collaborating on contributions, attribute co-authors in git commit trailers using the standard format:
+```text
+Co-authored-by: Collaborator Name <collaborator@email.com>
+```
+This ensures all contributors are properly credited in GitHub's commit graphs and contribution insights.
+
