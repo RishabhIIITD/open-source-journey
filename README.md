@@ -20,6 +20,7 @@ Rather than simply submitting code, each contribution is documented with a detai
 | **03** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2168](https://github.com/PyCalendar/icalendar/pull/2168) <br> *(Issue #1851)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/03-pycalendar-recur-byhour/README.md) · [📄 PDF](./contributions/03-pycalendar-recur-byhour/walkthrough-guide.pdf) |
 | **04** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2169](https://github.com/PyCalendar/icalendar/pull/2169) <br> *(Issue #1851)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/04-pycalendar-recur-byminute/README.md) · [📄 PDF](./contributions/04-pycalendar-recur-byminute/walkthrough-guide.pdf) |
 | **05** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2170](https://github.com/PyCalendar/icalendar/pull/2170) <br> *(Issue #1851)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/05-pycalendar-recur-bysecond/README.md) · [📄 PDF](./contributions/05-pycalendar-recur-bysecond/walkthrough-guide.pdf) |
+| **06** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2171](https://github.com/PyCalendar/icalendar/pull/2171) <br> *(Issue #1851)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/06-pycalendar-recur-bymonth/README.md) · [📄 PDF](./contributions/06-pycalendar-recur-bymonth/walkthrough-guide.pdf) |
 
 ---
 
