@@ -31,6 +31,7 @@ Rather than simply submitting code, each contribution is documented with a detai
 | **14** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2179](https://github.com/PyCalendar/icalendar/pull/2179) <br> *(Issue #1851)* | Python, pytest, RFC 7529 | 🟢 Open / In Review | [📖 Case Study](./contributions/14-pycalendar-recur-skip/README.md) · [📄 PDF](./contributions/14-pycalendar-recur-skip/walkthrough-guide.pdf) |
 | **15** | [**OmniScreen: omniscreen-agent**](https://github.com/aditya8242/omniscreen-agent) | [PR #4](https://github.com/aditya8242/omniscreen-agent/pull/4) <br> *(Issue #3)* | Python, FastAPI, SQLite WAL, pytest | 🟢 Open / In Review | [📖 Case Study](./contributions/15-omniscreen-session-export/README.md) · [📄 PDF](./contributions/15-omniscreen-session-export/walkthrough-guide.pdf) |
 | **16** | [**Ishti AI: ishti-ai**](https://github.com/ishtiaq-ahmed-dev/ishti-ai) | [PR #12](https://github.com/ishtiaq-ahmed-dev/ishti-ai/pull/12) <br> *(Issue #5)* | Python, Docker, Multi-Arch Digest | 🟢 Open / In Review | [📖 Case Study](./contributions/16-ishti-ai-pin-sandbox-digest/README.md) · [📄 PDF](./contributions/16-ishti-ai-pin-sandbox-digest/walkthrough-guide.pdf) |
+| **17** | [**PyCalendar: icalendar**](https://github.com/PyCalendar/icalendar) | [PR #2182](https://github.com/PyCalendar/icalendar/pull/2182) <br> *(Issue #1851)* | Python, pytest, RFC 5545 | 🟢 Open / In Review | [📖 Case Study](./contributions/17-pycalendar-recur-byday/README.md) · [📄 PDF](./contributions/17-pycalendar-recur-byday/walkthrough-guide.pdf) |
 
 ---
 
