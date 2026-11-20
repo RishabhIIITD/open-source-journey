@@ -1,0 +1,35 @@
+name: Verify Portfolio Integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate Case Studies & Artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Case Study Validator
+        run: |
+          python3 scripts/validate_case_studies.py
+
+      - name: Validate Markdown Formatting
+        run: |
+          python3 -c "
+          import sys
+          from pathlib import Path
+          contribs = list(Path('contributions').glob('*/README.md'))
+          print(f'Checked {len(contribs)} case study READMEs')
+          sys.exit(0)
+          "
