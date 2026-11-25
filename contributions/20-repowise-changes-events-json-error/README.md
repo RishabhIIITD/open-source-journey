@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #6000: fix(cli): output json error on missing index in changes and events (#5979)](https://github.com/repowise-dev/repowise/pull/6000) |
 | **Issue Resolved** | [Issue #5979: [Bug] `repowise changes list --format json` and `repowise events --format json` print plain text when there is no index](https://github.com/repowise-dev/repowise/issues/5979) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | Submitted upstream & awaiting maintainer review |
+| **Status** | 🟣 Merged upstream into `main` by `@RaghavChamadiya` on Nov 21, 2026 |
 | **Test Verification** | 100% unit tests passing across changes and events commands |
 
 ---

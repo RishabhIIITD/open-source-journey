@@ -6,6 +6,7 @@
 > **Component**: `Casks/g/gram.rb`  
 > **Contributor**: Rishabh Bafna ([@RishabhIIITD](https://github.com/RishabhIIITD))  
 > **Technologies**: Ruby, Homebrew Cask DSL, XDG Desktop Entry Spec, FreeDesktop Icons, RuboCop  
+> **Status**: 🔴 Closed (Duplicate of earlier PR #303992 by maintainers; 100% CI checks passed)  
 
 ---
 

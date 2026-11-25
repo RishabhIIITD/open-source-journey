@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #5996: fix(cli): exit 1 on delete command failure branches (#5980)](https://github.com/repowise-dev/repowise/pull/5996) |
 | **Issue Resolved** | [Issue #5980: [Bug] `repowise delete <unknown id>` prints "not found" and exits 0](https://github.com/repowise-dev/repowise/issues/5980) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | Submitted upstream & awaiting maintainer review |
+| **Status** | 🟣 Merged upstream into `main` by `@RaghavChamadiya` on Nov 21, 2026 |
 | **Test Verification** | 4/4 unit tests passing (100%), 5/5 integration tests passing (100%) |
 
 ---

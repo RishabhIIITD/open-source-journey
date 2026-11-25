@@ -6,6 +6,7 @@
 > **Component**: `libs/checkpoint-sqlite/langgraph/checkpoint/sqlite` (`SqliteSaver` & `AsyncSqliteSaver`)  
 > **Contributor**: Rishabh Bafna ([@RishabhIIITD](https://github.com/RishabhIIITD))  
 > **Technologies**: Python 3.10+, SQLite, aiosqlite, sqlcipher3, apsw, Database Migrations, Pytest  
+> **Status**: 🔴 Closed by triage bot (LangGraph `check-issue-link` requires maintainer issue assignment prior to PR acceptance)  
 
 ---
 

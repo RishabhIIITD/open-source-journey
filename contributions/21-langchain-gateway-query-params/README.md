@@ -9,7 +9,7 @@
 | **Issue Resolved** | [Issue #41951: Gateway base URLs with query parameters append provider path to query instead of URL path](https://github.com/langchain-ai/langchain/issues/41951) |
 | **Component** | `libs/core/langchain_core/utils/_gateway.py` |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | 🟢 Open upstream / Awaiting maintainer review |
+| **Status** | 🔴 Closed by triage bot (LangChain `check-issue-link` requires maintainer issue assignment prior to PR acceptance) |
 | **Test Verification** | 100% unit tests passing in `libs/core/tests/unit_tests/utils/test_gateway.py` (64/64 passed) |
 
 ---

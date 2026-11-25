@@ -6,6 +6,7 @@
 > **Component**: `lib/crewai/src/crewai/artifacts.py` (`LocalArtifactStore`)  
 > **Contributor**: Rishabh Bafna ([@RishabhIIITD](https://github.com/RishabhIIITD))  
 > **Technologies**: Python 3.12+, Pydantic v2, File Systems, Monotonic Versioning, Pytest  
+> **Status**: 🟢 Open upstream / Security review passed by Strix (`strix-security[bot]` verified 0 vulnerabilities)  
 
 ---
 

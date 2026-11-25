@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #5999: fix(cli): validate path existence in watch command (#5981)](https://github.com/repowise-dev/repowise/pull/5999) |
 | **Issue Resolved** | [Issue #5981: [Bug] `repowise watch <missing path>` creates the directory and blocks forever](https://github.com/repowise-dev/repowise/issues/5981) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | Submitted upstream & awaiting maintainer review |
+| **Status** | 🟣 Merged upstream into `main` by `@RaghavChamadiya` on Nov 21, 2026 |
 | **Test Verification** | 29/29 unit tests passing (100%) |
 
 ---
