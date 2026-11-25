@@ -6,10 +6,10 @@
 | :--- | :--- |
 | **Target Repository** | [`paperclipai/paperclip`](https://github.com/paperclipai/paperclip) |
 | **Pull Request** | [PR #22903: fix(evals-hub): harden date parsing, url traversal guards and utf-8 encoding](https://github.com/paperclipai/paperclip/pull/22903) |
-| **Issue Resolved** | In-PR Bug Report: Evals hub script lacks explicit UTF-8 encoding, rejects RFC 3339 lowercase timestamps, omits path traversal checks, and raises unhandled KeyErrors |
+| **Issue Resolved** | In-PR Bug Report & Greptile Security Review: Evals hub script lacks explicit UTF-8 encoding, rejects RFC 3339 lowercase timestamps, omits encoded URL path traversal checks, and raises unhandled KeyErrors |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
 | **Status** | 🟢 Open / In Review |
-| **Test Verification** | 100% unit tests passing (13/13 in `scripts/evals-hub/test_build.py`) |
+| **Test Verification** | 100% unit tests passing (16/16 across `scripts/evals-hub/test_build.py` and `tests/runner-e2e/test_evals_hub_build.py`) |
 
 ---
 
@@ -20,7 +20,7 @@ Paperclip is the open-source platform used to orchestrate and manage AI agent fl
 During an audit of the Python tooling and build pipeline:
 1. **Implicit Locale Encoding in File I/O**: `read_text()` and `write_text()` in `build.py` omitted explicit `encoding="utf-8"`. On non-UTF-8 host locales (e.g., Windows environments defaulting to CP1252 or minimal Linux containers with `LANG=C`), parsing and rendering templates containing Unicode characters (such as the middle dot `·` in `display_date`) crashes with `UnicodeDecodeError` or `UnicodeEncodeError`.
 2. **Naive Timestamp Normalization**: `display_date(value)` used a naive `value.replace("Z", "+00:00")`. This failed on valid RFC 3339 timestamps using lowercase `z` or timestamps with surrounding whitespace, and performed a global replacement rather than strictly stripping the trailing UTC designator.
-3. **URL Path Traversal Risk**: `public_report(url, prefix)` verified that URLs started with `/{prefix}/campaigns/` but failed to reject `/../` directory traversal sequences, allowing malicious or malformed report URLs to escape the campaign directory.
+3. **URL Path Traversal Risk (Direct & URL-Encoded)**: `public_report(url, prefix)` verified that URLs started with `/{prefix}/campaigns/` but failed to reject `/../` directory traversal sequences, URL-encoded parent directories (`%2e%2e`), or backslashes (`\`) which browsers resolve as path separators, allowing malicious or malformed report URLs to escape the campaign directory.
 4. **Unhandled KeyErrors on Malformed Campaign Feeds**: In `latest()` and `summarize()`, missing keys such as `campaigns` or `totals["passed"]` raised raw `KeyError` or `TypeError` rather than descriptive `ValueError` exceptions expected by callers.
 
 ---
@@ -31,17 +31,21 @@ During an audit of the Python tooling and build pipeline:
 
 In `scripts/evals-hub/build.py`:
 - Added `encoding="utf-8"` to all `read_text()` and `write_text()` invocations in `main()`.
-- Enhanced `public_report()` with explicit string type verification and path traversal guards (`"/../" in parsed.path or parsed.path.endswith("/..")`).
+- Enhanced `public_report()` with explicit string type verification, URL-decoding (`unquote()`), backslash normalization, and `posixpath.normpath()` path traversal guards:
 
 ```python
 def public_report(url, prefix):
     if not isinstance(url, str):
         raise ValueError("Unexpected public report URL")
     parsed = urlsplit(url)
+    allowed_prefix = f"/{prefix}/campaigns/"
     if (parsed.scheme != "https" or parsed.netloc != urlsplit(ORIGIN).netloc
-            or not parsed.path.startswith(f"/{prefix}/campaigns/")
-            or "/../" in parsed.path or parsed.path.endswith("/..")
+            or not parsed.path.startswith(allowed_prefix)
             or parsed.query or parsed.fragment):
+        raise ValueError("Unexpected public report URL")
+    decoded_path = unquote(parsed.path).replace("\\", "/")
+    if ("/../" in decoded_path or decoded_path.endswith("/..")
+            or not posixpath.normpath(decoded_path).startswith(allowed_prefix.rstrip("/"))):
         raise ValueError("Unexpected public report URL")
     return html.escape(url, quote=True)
 ```
@@ -69,20 +73,28 @@ In `latest()` and `summarize()`:
 - Verified `campaigns` is an iterable list and `totals` contains required integer fields `passed` and `selected`.
 - Guaranteed that all schema discrepancies raise structured `ValueError` exceptions.
 
-### D. Comprehensive Unit Tests
+### D. Comprehensive Unit Tests & CI Conformance
 
-In `scripts/evals-hub/test_build.py`:
-- Added unit tests for lowercase `'z'` and offset timestamp normalization.
-- Added path traversal rejection tests for `/../` and `/..`.
-- Added tests verifying `ValueError` is raised on missing totals keys and missing campaigns list.
+- In `scripts/evals-hub/test_build.py`:
+  - Added unit tests for lowercase `'z'` and offset timestamp normalization.
+  - Added path traversal rejection tests for `/../`, `/..`, URL-encoded `%2e%2e`, `%2E%2E`, `..%2f`, and backslashes `..\`.
+  - Added tests verifying `ValueError` is raised on missing totals keys and missing campaigns list.
+- In `tests/runner-e2e/test_evals_hub_build.py`:
+  - Added dedicated end-to-end runner test suite conforming to Paperclip's automated PR test coverage rules (`check-pr-test-coverage.mjs`).
 
 ---
 
 ## 3. Verification & Results
 
-- Executed the full unit test suite:
+- Executed both test suites:
   ```bash
   python3 -m unittest -v scripts/evals-hub/test_build.py
+  python3 -m unittest -v tests/runner-e2e/test_evals_hub_build.py
   ```
-  Result: **13 passed, 0 failed** (100% pass rate).
+  Result: **16 passed, 0 failed** (100% pass rate).
+- Validated with Paperclip's PR test gate:
+  ```bash
+  node .github/scripts/check-pr-test-coverage.mjs
+  ```
+  Result: `{ passed: true, failures: [] }`.
 - Opened upstream Pull Request [#22903](https://github.com/paperclipai/paperclip/pull/22903) adhering to Paperclip's Simplified Technical English (ASD-STE100) and structured PR requirements.
