@@ -5,7 +5,7 @@
 **Pull Request:** [PR #14622 - fix(tasks): validate standalone publication years and reject malformed dates (#14566)](https://github.com/internetarchive/openlibrary/pull/14622)  
 **Author:** [@RishabhIIITD](https://github.com/RishabhIIITD) (Rishabh Bafna)  
 **Tech Stack:** Python 3, web.py, Regex, pytest, GitHub Actions  
-**PR Status:** 🟢 Open / In Review  
+**PR Status:** 🟣 Merged (Merged Nov 26, 2026)  
 **Documentation:** [📄 Download Formatted PDF Guide](./walkthrough-guide.pdf)
 
 ---

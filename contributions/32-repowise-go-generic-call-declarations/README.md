@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #6283: fix(ingestion): recognize Go generic constructor call receiver assignments (#2796)](https://github.com/repowise-dev/repowise/pull/6283) |
 | **Issue Resolved** | [Issue #2796: A generic constructor call (x := New[T](...)) leaves its local untyped in Go](https://github.com/repowise-dev/repowise/issues/2796) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | 🟢 Open / In Review |
+| **Status** | 🟣 Merged (Merged Nov 26, 2026) |
 | **Test Verification** | 100% unit tests passing (250/250 in `tests/unit/ingestion/test_receiver_types.py`) |
 
 ---

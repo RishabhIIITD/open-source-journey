@@ -5,7 +5,7 @@
 **Pull Request:** [PR #14536 - fix(worksearch): remove dead endpoint /search/languages](https://github.com/internetarchive/openlibrary/pull/14536)  
 **Author:** [@RishabhIIITD](https://github.com/RishabhIIITD)  
 **Tech Stack:** Python 3, web.py, Solr, Docker, Ruff, pre-commit.ci  
-**PR Status:** 🟢 Open / CI Passing (Merged ready)
+**PR Status:** 🔴 Closed (Untriaged Issue)
 
 ---
 

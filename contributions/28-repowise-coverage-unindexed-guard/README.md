@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #6278: fix(coverage): guard coverage add and status against unindexed repositories (#5743)](https://github.com/repowise-dev/repowise/pull/6278) |
 | **Issue Resolved** | [Issue #5743: [Bug] coverage add and coverage status crash with a traceback in a repository that was never indexed](https://github.com/repowise-dev/repowise/issues/5743) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | 🟢 Open / In Review |
+| **Status** | 🟣 Merged (Merged Nov 26, 2026) |
 | **Test Verification** | 100% unit tests passing (31 passed, 4 skipped in `tests/unit/cli/test_coverage_cmd.py`) |
 
 ---
