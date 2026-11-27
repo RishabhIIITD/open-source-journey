@@ -8,7 +8,7 @@
 | **Pull Request** | [PR #6275: fix(code_origin): treat sample-app, test-app, playground as sample code (#6220)](https://github.com/repowise-dev/repowise/pull/6275) |
 | **Issue Resolved** | [Issue #6220: [Bug] path_origin reads sample-app, test-app and playground folders as production code](https://github.com/repowise-dev/repowise/issues/6220) |
 | **Author** | **Rishabh Bafna** (`@RishabhIIITD` / `rishabh20118@iiitd.ac.in`) |
-| **Status** | 🟢 Open / In Review |
+| **Status** | 🔴 Closed (Duplicate of #6231) |
 | **Test Verification** | 100% unit tests passing (163/163 in `tests/unit/test_code_origin.py`) |
 
 ---
